@@ -4,7 +4,7 @@ Plugin Name: Web Fiction Table of Contents Widget
 Plugin URI: http://sorrowfulunfounded.com/wp-toc-widget
 Description: This sidebar widget creates a table of contents from a specified category. Intended for use with Web Novels/Serials, but should be useful for anyone publishing a book using WordPress.
 Author: Christopher Clarke
-Version: 0.1
+Version: 0.2
 Author URI: http://sorrowfulunfounded.com/
 */
 
@@ -33,7 +33,7 @@ class WF_ToC_Widget extends WP_Widget {
 		if ($display_only == false || (in_category($chapter_cat) == true && $display_only == true))
 		{
 		
-		    echo $before_widget,  $before_title, (isset($instance['toc-title'])) ? $instance['toc-title'] : 'Table of Contents', $after_title;
+		    echo $before_widget,  $before_title, (isset($instance['toc-title']) && strlen($instance['toc-title']) >= 1) ? $instance['toc-title'] : 'Table of Contents', $after_title;
 	
 		    if ($chapter_cat == 0)
 			{
@@ -81,7 +81,7 @@ class WF_ToC_Widget extends WP_Widget {
 	  		<option value="<?php echo $category->term_id; ?>" <?php selected($instance['toc-category'], $category->term_id); ?>><?php echo $category->cat_name; ?></option>
 		<?php } ?>
 	  </select></p>
-	  <p><label for="<?php echo $this->get_field_id('chapter-format'); ?>">Format of Chapter Title: (<a href="http://muses-success.info/plugins/support/wp-toc">Help</a>)</label>
+	  <p><label for="<?php echo $this->get_field_id('chapter-format'); ?>">Format of Chapter Title: (<a href="http://sorrowfulunfounded.com/wp-toc-widget">Help</a>)</label>
 	  <input class="widefat" id="<?php echo $this->get_field_id('chapter-format'); ?>" name="<?php echo $this->get_field_name('chapter-format'); ?>" type="text" value="<?php if (isset($instance['chapter-format'])) { echo esc_attr($instance['chapter-format']); } else { echo '{num}. {title}'; } ?>" /></p>
 	  <p><label><input type="checkbox" <?php checked($instance['toc-display'], true) ?>  id="<?php echo $this->get_field_id('toc-display'); ?>" name="<?php echo $this->get_field_name('toc-display'); ?>" /> Display <acronym title="Table of Contents">TOC</acronym> in Chapters Only</label></p>
 	  <p><label><input type="checkbox" <?php checked($instance['toc-ol'], true) ?>   id="<?php echo $this->get_field_id('toc-ol'); ?>" name="<?php echo $this->get_field_name('toc-ol'); ?>" /> Use Ordered List (<a style="cursor: help;" title="Tick this option if you want to have your table of contents generated as an ordered list. This may look out of place unless styled using CSS but the result is worth it from a structural perspective." href="#">?</a>)</p>
