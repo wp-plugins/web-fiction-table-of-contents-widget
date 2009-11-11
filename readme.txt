@@ -3,8 +3,8 @@ Contributors: Christopher Clarke
 Donate link: http://sorrowfulunfounded.com/wp-toc-widget
 Tags: web fiction, widget, table of contents, toc, blook, novel, sidebar
 Requires at least: 2.8
-Tested up to: 2.8.4
-Stable tag: 0.2
+Tested up to: 2.8.5
+Stable tag: 0.2.1
 
 This sidebar widget will generate a table of contents from a category of posts 
 in chronological order.
@@ -34,6 +34,9 @@ None yet. Please post your questions to the Muse's Success Community Forums.
 1. Widget Configuration
 
 == Changelog ==
+
+= 0.2.1 =
+* Changed compatible up to info, no other changes
 
 = 0.2 =
 * Bug Fix - Not setting a title for your table of contents widget no longer displays a widget without a title, it now displays Table of Contents as the Widget Configuration box indicates.
