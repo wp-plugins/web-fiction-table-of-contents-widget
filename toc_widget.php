@@ -4,7 +4,7 @@ Plugin Name: Web Fiction Table of Contents Widget
 Plugin URI: http://sorrowfulunfounded.com/wp-toc-widget
 Description: This sidebar widget creates a table of contents from a specified category. Intended for use with Web Novels/Serials, but should be useful for anyone publishing a book using WordPress.
 Author: Christopher Clarke
-Version: 0.2.1
+Version: 0.2.2
 Author URI: http://sorrowfulunfounded.com/
 */
 
