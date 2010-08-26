@@ -3,8 +3,8 @@ Contributors: Christopher Clarke
 Donate link: http://sorrowfulunfounded.com/wp-toc-widget
 Tags: web fiction, widget, table of contents, toc, blook, novel, sidebar
 Requires at least: 2.8
-Tested up to: 2.8.6
-Stable tag: 0.2.2
+Tested up to: 3.0.1
+Stable tag: 0.2.3
 
 This sidebar widget will generate a table of contents from a category of posts 
 in chronological order.
@@ -35,7 +35,7 @@ None yet. Please post your questions to the Muse's Success Community Forums.
 
 == Changelog ==
 
-= 0.2.1, 0.2.2 =
+= 0.2.1, 0.2.2, 0.2.3 =
 * Changed compatible up to info, no other changes
 
 = 0.2 =
